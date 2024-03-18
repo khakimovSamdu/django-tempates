@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web site</title>
+    <link rel="stylesheet" href="site.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0)40%,rgba(18, 10, 10, 0.5)60%), url("https://images-na.ssl-images-amazon.com/images/I/81Ir1ZnwJsL._SL1500_.jpg");
+    background-position: center;
+    background-size: 40%;
+    height: 109vh;
+}.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.menu{
+    width: 800px;
+    float: right;
+    height: 50px;
+    display: block;
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+ul li{
+    list-style: none;
+    margin-left: 30px;
+    margin-top: 27px;
+    font-size: 18px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+}
+ul li a:hover{
+    color: #ff720f;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-top: 10px;
+    /* margin-left: 270px; */
+}
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff720f;
+    margin-top: 13px;
+    color: white;
+    font-size: 15px;
+    float: left;
+    padding: 10px;
+    border-radius: 5px;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff720f;
+    border: 2px solid #ff720f;
+    margin-top: 13px;
+    margin-left: 3px;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+
+}
+.btn:focus{
+    outline: none;
+}
+.srch:focus{
+    outline: none;
+}
+.content{
+    width: 1200px;
+    height: auto;
+    margin-top: 100px;
+    margin-right: 160px;
+    margin-right: 800px;
+    color: white;
+    position:fixed;
+    justify-content: center;
+}
+ 
+.from{
+    width: 350px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: -20px;
+    left: 870px;
+    border-radius: 10px;
+    padding: 25px;
+}
+.from h2{
+    width: 320px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff720f;
+    font-size: 22px;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+
+}
+.from input{
+    width: 300px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff720f;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.from input:focus{
+    outline: none;
+}
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+
+}
+.btnn{
+    width: 300px;
+    height: 40px;
+    background: #ff720f;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 3s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #ff720f;
+}
+.btnn a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.from .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.from .link a{
+    text-decoration: none;
+    color: #ff720f;
+}
+.liw{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            
+            <div class="menu">
+                {% for i in phone %}
+                <ul>
+                    <li><a href="{{i}}">{{i}}</a></li>
+                </ul>
+                {% endfor %}
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Search">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>
+        </div>
+        <div class="content">
+
+            <div class="from">
+                <h2>Ro'yxatdan o'tish</h2>
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="Parol" placeholder="Password">
+                <button class="btnn"><a href="#">Login</a></button>
+
+                <p class="link">Hisobingiz yo‘q tarmoqda mavjud emas<br>
+                <a href="#">Bu yerda roʻyxatdan oʻting</a></p>
+                <p class="liw">Ushbu link orqali </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
